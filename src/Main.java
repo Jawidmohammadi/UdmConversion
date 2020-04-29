@@ -4,7 +4,7 @@ public class Main {
     int highScore = calculateScore(true, 800, 5, 100);
     System.out.println(highScore);
 
-    highScore = calculateScore(true, 10000, 8, 200);
+    highScore = calculateScore(false, 10000, 8, 200);
     System.out.println(highScore);
 
    int  highScorePosition = calculateHighScorePosition(1500);

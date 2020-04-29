@@ -20,9 +20,11 @@ public class Main {
 
     double miles = SpeedConverter.toMilePerHour(10.5);
     System.out.println("Miles = " + miles);
-
     SpeedConverter.printConversion(11);
 
+// MegaBytesConverter
+    MegaBytesConverter.printMegaBytesAndKiloBytes(1026);
+    MegaBytesConverter.printMegaBytesAndKiloBytes(512000);
   }
 
   public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {

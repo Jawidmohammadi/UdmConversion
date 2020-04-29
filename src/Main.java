@@ -1,6 +1,15 @@
 public class Main {
 
   public static void main(String[] args) {
+    MegaBytesConverter.printMegaBytesAndKiloBytes(5000);
+    MegaBytesConverter.printMegaBytesAndKiloBytes(1024);
+    MegaBytesConverter.printMegaBytesAndKiloBytes(2500);
+
+    BarkingDog.shouldWakeUp(true, 1);
+    BarkingDog.shouldWakeUp(false, 2);
+
+
+
     int highScore = calculateScore(true, 800, 5, 100);
     System.out.println(highScore);
 

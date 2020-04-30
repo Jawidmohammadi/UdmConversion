@@ -8,7 +8,14 @@ public class Main {
     BarkingDog.shouldWakeUp(true, 1);
     BarkingDog.shouldWakeUp(false, 2);
 
+    System.out.println("Is leap Year? " + LeapYearCalculator.isLeapYear(12));
+    System.out.println("Is leap Year? " + LeapYearCalculator.isLeapYear(10000));
 
+    System.out.println(DecimalComparator.areEqualThreeDecimalPlace(-3.1756, -3.175));//true
+    System.out.println(DecimalComparator.areEqualThreeDecimalPlace(3.1766, 3.1756));//false
+    System.out.println(DecimalComparator.areEqualThreeDecimalPlace(3.1015, 3.1014));//true
+    System.out.println(DecimalComparator.areEqualThreeDecimalPlace(-3.123, 3.123));//false
+    System.out.println(DecimalComparator.areEqualThreeDecimalPlace(5.1766, 5.1764));//true
 
     int highScore = calculateScore(true, 800, 5, 100);
     System.out.println(highScore);

@@ -17,6 +17,14 @@ public class Main {
     System.out.println(DecimalComparator.areEqualThreeDecimalPlace(-3.123, 3.123));//false
     System.out.println(DecimalComparator.areEqualThreeDecimalPlace(5.1766, 5.1764));//true
 
+    System.out.println("This Number is a Teen " + DecimalComparator.hasTeen(10,12,20));
+    System.out.println("This Number is a Teen " + DecimalComparator.hasTeen(10,12,19));
+    System.out.println("This Number is a Teen " + DecimalComparator.hasTeen(10,13,20));
+    System.out.println("This Number is a Teen " + DecimalComparator.hasTeen(13,14,20));
+
+    Converter.calcFeetAndInchesToCentimeters(20,11);
+    Converter.calcFeetAndInchesToCentimeters(99);
+
     int highScore = calculateScore(true, 800, 5, 100);
     System.out.println(highScore);
 

@@ -25,6 +25,7 @@ public class Main {
     Converter.calcFeetAndInchesToCentimeters(20,11);
     Converter.calcFeetAndInchesToCentimeters(99);
 
+
     int highScore = calculateScore(true, 800, 5, 100);
     System.out.println(highScore);
 

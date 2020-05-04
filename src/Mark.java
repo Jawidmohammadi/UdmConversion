@@ -21,7 +21,7 @@ public class Mark {
     }
     System.out.println("Total even numbers found = " + count);
 
-    
+
   }
 
 

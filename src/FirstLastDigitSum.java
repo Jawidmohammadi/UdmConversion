@@ -9,11 +9,10 @@ public class FirstLastDigitSum {
     System.out.println(sumFirstAndLastDigit(5));
     System.out.println(sumFirstAndLastDigit(11));
     System.out.println(sumFirstAndLastDigit(-10));
-
-    System.out.println(hasSharedDigit(19, 29));
-    System.out.println(hasSharedDigit(19, 20));
-    System.out.println(hasSharedDigit(81, 19));
-  }
+    System.out.println("**********************************");
+    System.out.println(getEvenDigitSum(123198756));
+    System.out.println(getEvenDigitSum(45629));
+}
 
   public static int sumFirstAndLastDigit(int number) {
 //    int lastDigit = number % 10;
@@ -34,17 +33,51 @@ public class FirstLastDigitSum {
 //    }
 //    return sum;
 
-    int lastdigit = number % 10; // extracting the last digit.
-    if (number >= 0) {
+//    int lastdigit = number % 10; // extracting the last digit.
+//    if (number >= 0) {
+//      while (number >= 10) {
+//        number /= 10;
+//      }
+//      return lastdigit + number;
+//
+//    } else if (number < 0) {
+//      return -1;
+//    }
+//    return lastdigit;
+//  }
+
+    // same as above codes
+    int lastDigit = number % 10;
+    int sum = 0;
+    if (number > 0) {
       while (number >= 10) {
         number /= 10;
       }
-      return lastdigit + number;
-
+      sum += number + lastDigit;
+    } else if (number < 0 ){
+      return -1;
     } else {
+      return 0;
+    }
+    return sum;
+  }
+
+  public static int getEvenDigitSum(int number) {
+    if (number < 0) {
       return -1;
     }
+    int sum = 0;
+
+    while (number > 0) {
+      int lastDigit = number % 10;
+      if (lastDigit % 2 == 0) {
+        sum += lastDigit;
+      }
+      number /= 10;
+    }
+    return sum;
   }
+
 
   public static boolean hasSharedDigit(int number1, int number2) {
     if  (number1 >= 10 && number1 <= 99 && number2 >= 10 && number2 <= 99) {
@@ -53,8 +86,7 @@ public class FirstLastDigitSum {
       while (true) {
         number1 /= 10;
         number2 /= 10;
-        return lastDigit == lastDigit2 || number1 == number2 || number1 == lastDigit || number2 == lastDigit2 || lastDigit == number2 || lastDigit2 == number1
-            ;
+        return lastDigit == lastDigit2 || number1 == number2 || number1 == lastDigit || number2 == lastDigit2 || lastDigit == number2 || lastDigit2 == number1;
       }
     }
     return false;

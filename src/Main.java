@@ -41,8 +41,7 @@ public class Main {
     highScorePosition = calculateHighScorePosition(50);
     displayHighScorePosition("Son", highScorePosition );
 
-    // SpeedConverter
-
+    // SpeedConverte
     double miles = SpeedConverter.toMilePerHour(10.5);
     System.out.println("Miles = " + miles);
     SpeedConverter.printConversion(11);

@@ -12,7 +12,28 @@ public class FirstLastDigitSum {
     System.out.println("**********************************");
     System.out.println(getEvenDigitSum(123198756));
     System.out.println(getEvenDigitSum(45629));
-}
+
+    System.out.println(hasSameLastDigit(23,32,42));
+    System.out.println(hasSameLastDigit(1,51,31));
+    System.out.println(hasSameLastDigit(45,20,35));
+    System.out.println(hasSameLastDigit(19,59,31));
+    System.out.println(hasSameLastDigit(49,98,56));
+
+    System.out.println(getGreatestCommonDivisor(12, 30));
+
+    System.out.println("*******************************");
+
+
+
+printFactors(-5);
+    printFactors(32);
+    System.out.println("*******************************");
+
+    System.out.println(isPerfectNumber(6));
+    System.out.println(isPerfectNumber(28));
+    System.out.println(isPerfectNumber(5));
+    System.out.println(isPerfectNumber(10));
+  }
 
   public static int sumFirstAndLastDigit(int number) {
 //    int lastDigit = number % 10;
@@ -91,5 +112,77 @@ public class FirstLastDigitSum {
     }
     return false;
   }
+
+
+  public static boolean hasSameLastDigit (int num1,  int num2, int num3) {
+    if ((num1 >= 10 && num1 <= 1000) || (num2 >= 10 && num2 <= 1000) && (num3 <= 10 && num3 >= 1000)) {
+      int lastDigit1 = num1 % 10;
+      int lastDigit2 = num2 % 10;
+      int lastDigit3 = num3 % 10;
+        return lastDigit1 == lastDigit2 || lastDigit3 == lastDigit1 || lastDigit2 == lastDigit3;
+    }
+    else return false;
+  }
+
+
+  public static boolean isValid(int number) {
+    return number >= 10 && number <= 1000;
+  }
+
+
+
+  public static int getGreatestCommonDivisor(int first, int second) {
+    if (first < 10 || second < 10) return -1;
+    int maxNum = (first > second) ? first : second;
+    int count = 0;
+    for (int i = 1; i < maxNum ; i++) {
+
+      if ((first % i == 0) && (second % i == 0)) {
+        count = i;
+      }
+    }
+    return count;
+  }
+
+
+  public static void printFactors(int number) {
+    if (number < 1) {
+      System.out.println("Invalid Value");
+    } else if (number >=1) {
+    int factor = number;
+    for (int i = 1; i < number ; i++) {
+      if (number % i == 0) {
+        System.out.println(i);
+      }
+    }
+      System.out.println(number);
+    }
+  }
+
+
+  public static boolean isPerfectNumber(int number) {
+    int sum = 0;
+    if (number < 1) {
+      return false;
+    }
+    else if (number > 1) {
+      for (int i = 1; i < number; i++) {
+        if (number % i == 0) {
+          sum += i;
+          if (number == sum) {
+            return true;
+          }
+        }
+      }
+    }
+    return false;
+  }
+
+
+  public static String numberToWords(int number) {
+    if (number < 0) return "Invalid Value";
+
+  }
 }
+
 
